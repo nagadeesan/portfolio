@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portfolio</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav>
+        <div class="container">
+            <h1 class="logo">Portfolio</h1>
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+            <button class="menu-toggle"><i class="fas fa-bars"></i></button>
+        </div>
+    </nav>
+
+    <section id="home">
+        <div class="container hero-content">
+            <div class="hero-text">
+                <span class="greeting">Hello, I'm</span>
+                <h1 class="name">Naga Deesan M</h1>
+                <p class="tagline">Creative Developer & Designer</p>
+                <p class="description">I craft digital experiences that blend aesthetics with functionality</p>
+                <div class="cta-buttons">
+                    <a href="#projects" class="btn btn-primary">View Work</a>
+                    <a href="#contact" class="btn btn-secondary">Get in Touch</a>
+                </div>
+            </div>
+            <div class="hero-image">
+                <div class="image-wrapper">
+                    <img src="./WhatsApp Image 2026-02-24 at 9.19.36 PM.jpeg" alt="Profile Photo" class="profile-photo">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="about">
+        <div class="container">
+            <h2 class="section-title">About Me</h2>
+            <div class="about-content">
+                <div class="about-card">
+                    <div class="about-icon">
+                        <i class="fas fa-user-circle"></i>
+                    </div>
+                    <h3>Who I Am</h3>
+                    <p>I'm a student who enjoys learning and challenging myself, especially in the field of development. I like the process of building things from scratch and seeing how a simple idea can turn into something useful through code. It motivates me to keep improving every day.</p>
+                    <p>I would describe myself as hardworking and determined. When I start something, I try my best to stay consistent and finish it properly. I know I still have a lot to learn, but I'm always willing to put in the effort and grow step by step.</p>
+                    <p>Besides coding, I love dancing. It helps me relax, express myself, and stay creative. For me, both development and dance are different ways of creating something meaningful.</p>
+                    <p>I'm focused on improving my skills, gaining experience, and becoming a developer I can be proud of.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="skills">
+        <div class="container">
+            <h2 class="section-title">Skills & Expertise</h2>
+            <div class="skills-grid">
+                <div class="skill-card">
+                    <div class="skill-icon"><i class="fas fa-laptop-code"></i></div>
+                    <h3>Frontend Development</h3>
+                    <p>HTML, CSS, JavaScript, React</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="projects">
+        <div class="container">
+            <h2 class="section-title">Featured Projects</h2>
+            <div class="project-grid">
+                <div class="project-card">
+                    <div class="project-image">
+                        <img src="./Annotation 2026-02-24 212702.png" alt="Project 1">
+                    </div>
+                    <div class="project-content">
+                        <h3>Portfolio</h3>
+                        <p>Digital Resume</p>
+                        <div class="project-tags">
+                            <span class="tag">React</span>
+                            <span class="tag">Node.js</span>
+                        </div>
+                        <a href="./index.html" class="project-link">View Project</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact">
+        <div class="container">
+            <h2 class="section-title">Let's Connect</h2>
+                <div class="contact-methods">
+                    <a href="mailto:nagadeesan007@gmail.com" class="contact-item">
+                        <i class="fas fa-envelope contact-icon"></i>
+                        <span>nagadeesan007@gmail.com</span>
+                    </a>
+                    <a href="https://www.linkedin.com/in/naga-deesan-1147a6311/" target="_blank" class="contact-item">
+                        <i class="fab fa-linkedin contact-icon"></i>
+                        <span>LinkedIn</span>
+                    </a>
+                    <a href="https://github.com/nagadeesan" target="_blank" class="contact-item">
+                        <i class="fab fa-github contact-icon"></i>
+                        <span>GitHub</span>
+                    </a>
+                </div>
+
+                <div class="contact-form-wrapper">
+                    <h3>Send Me a Message</h3>
+                    <form id="contactForm" class="contact-form">
+                        <div class="form-group">
+                            <input type="text" id="name" name="name" placeholder="Your Name" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="email" id="email" name="email" placeholder="Your Email" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="text" id="subject" name="subject" placeholder="Subject" required>
+                        </div>
+                        <div class="form-group">
+                            <textarea id="message" name="message" rows="5" placeholder="Your Message" required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary">
+                            <span class="btn-text">Send Message</span>
+                            <span class="btn-loading" style="display: none;">
+                                <i class="fas fa-spinner fa-spin"></i> Sending...
+                            </span>
+                        </button>
+                        <div id="formMessage" class="form-message"></div>
+                    </form>
+                </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2026 Naga Deesan M. Crafted with passion.</p>
+        </div>
+    </footer>
+
+    <!-- EmailJS SDK -->
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+    
+    <!-- Firebase SDK -->
+    <script type="module">
+        import { initializeApp } from 'https://www.gstatic.com/firebasejs/10.8.0/firebase-app.js';
+        import { getDatabase, ref, push } from 'https://www.gstatic.com/firebasejs/10.8.0/firebase-database.js';
+
+        // Initialize EmailJS
+        emailjs.init('hKw1rC5RaHcd95nXG');
+
+        // Firebase configuration
+        const firebaseConfig = {
+            apiKey: "AIzaSyBPyYdlk30R5FUFRBnS8vleNuRxRJg2rvE",
+            authDomain: "contact-form-8d266.firebaseapp.com",
+            databaseURL: "https://contact-form-8d266-default-rtdb.firebaseio.com",
+            projectId: "contact-form-8d266",
+            storageBucket: "contact-form-8d266.firebasestorage.app",
+            messagingSenderId: "639174459494",
+            appId: "1:639174459494:web:29d8c5663f0379ed80ada7",
+            measurementId: "G-Q1LMWH77RG"
+        };
+
+        // Initialize Firebase
+        const app = initializeApp(firebaseConfig);
+        const database = getDatabase(app);
+
+        // Handle form submission
+        const contactForm = document.getElementById('contactForm');
+        const formMessage = document.getElementById('formMessage');
+        const btnText = document.querySelector('.btn-text');
+        const btnLoading = document.querySelector('.btn-loading');
+
+        contactForm.addEventListener('submit', async (e) => {
+            e.preventDefault();
+
+            // Show loading state
+            btnText.style.display = 'none';
+            btnLoading.style.display = 'inline';
+            formMessage.textContent = '';
+
+            // Get form data
+            const formData = {
+                name: document.getElementById('name').value,
+                email: document.getElementById('email').value,
+                subject: document.getElementById('subject').value,
+                message: document.getElementById('message').value,
+                timestamp: new Date().toISOString()
+            };
+
+            try {
+                // Save to Firebase first
+                await push(ref(database, 'contacts'), formData);
+                console.log('✅ Data saved to Firebase');
+
+                // Try to send emails (but don't fail if this doesn't work)
+                try {
+                    // Send email to yourself (admin notification)
+                    await emailjs.send(
+                        'service_k23eccb',
+                        'template_ht4veme',
+                        {
+                            from_name: formData.name,
+                            from_email: formData.email,
+                            subject: formData.subject,
+                            message: formData.message,
+                            reply_to: formData.email
+                        }
+                    );
+                    console.log('✅ Admin email sent');
+
+                    // Send confirmation email to user
+                    await emailjs.send(
+                        'service_k23eccb',
+                        'template_kh21uvr',
+                        {
+                            to_name: formData.name,
+                            to_email: formData.email,
+                            reply_to: formData.email,
+                            subject: formData.subject,
+                            message: formData.message
+                        }
+                    );
+                    console.log('✅ User confirmation email sent');
+
+                    formMessage.textContent = 'Message sent successfully! Check your email for confirmation.';
+                } catch (emailError) {
+                    console.error('⚠️ Email sending failed:', emailError);
+                    formMessage.textContent = 'Message saved! Email notification failed, but I received your message.';
+                }
+
+                formMessage.className = 'form-message success';
+                contactForm.reset();
+            } catch (error) {
+                // Show error message
+                formMessage.textContent = 'Failed to send message. Please try again or email me directly.';
+                formMessage.className = 'form-message error';
+                console.error('❌ Error:', error);
+            } finally {
+                // Reset button state
+                btnText.style.display = 'inline';
+                btnLoading.style.display = 'none';
+            }
+        });
+    </script>
+    <script src="script.js"></script>
+</body>
+</html>
